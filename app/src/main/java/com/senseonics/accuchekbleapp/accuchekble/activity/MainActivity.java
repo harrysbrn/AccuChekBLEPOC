@@ -278,6 +278,11 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
                         startActivity(new Intent(MainActivity.this, PrivacyPolicyActivity.class));
                         drawer.closeDrawers();
                         return true;
+                    case R.id.nav_ble_connect_one:
+                        // launch new intent instead of loading fragment
+                        startActivity(new Intent(MainActivity.this, BLEConnectActivity.class));
+                        drawer.closeDrawers();
+                        return true;
                     default:
                         navItemIndex = 0;
                 }
